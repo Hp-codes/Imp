@@ -1,0 +1,42 @@
+6- Data Analytics III
+Implement Simple Naïve Bayes
+*import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import confusion_matrix,
+ConfusionMatrixDisplay,classification_report,
+accuracy_score, precision_score, recall_score, f1_score
+from sklearn.preprocessing import LabelEncoder
+*data = pd.read_csv("iris.csv")
+data.head() ……info…..des
+*data.isnull().sum()
+*x = data.iloc[:,1:5]
+y = data.iloc[:,5:]
+*print(x)
+print(y)
+print(x.shape)
+print(y.shape)
+*x_train,x_test,y_train,y_test = train_test_split(x,y,
+test_size = 0.3,random_state = 0)
+*pred
+*y_test
+*cm = confusion_matrix(y_test,pred)
+disp = ConfusionMatrixDisplay(confusion_matrix = cm)
+print("Confusion matrix:")
+print(cm)
+*disp.plot()
+plt.show()
+*def get_confusion_matrix_values(y_true, y_pred):
+ cm = confusion_matrix(y_true, y_pred)
+ return(cm[0][0], cm[0][1], cm[1][0], cm[1][1])
+TP, FP, FN, TN = get_confusion_matrix_values(y_test,pred)
+print("TP: ", TP)
+print("FP: ", FP)
+print("FN: ", FN)
+print("TN: ", TN)
+*print("The Accuracy is ", (TP+TN)/(TP+TN+FP+FN))
+print("The precision is ", TP/(TP+FP))
+print("The recall is ", TP/(TP+FN))

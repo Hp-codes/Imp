@@ -1,0 +1,19 @@
+8-Data Visualization I
+Use the inbuilt dataset 'titanic
+*import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+*df = pd.read_csv("titanic.csv")
+*df.describe()
+*df.info()
+*df.dtypes
+*dataset = sns.load_dataset('titanic')
+*dataset.head()
+*#distributed
+sns.distplot(x = dataset['age'], bins = 10)
+*sns.barplot(x='sex', y='age', data=dataset)
+*sns.stripplot(x='sex', y='age', data=dataset, jitter=False)
+*corr = dataset.corr()
+*sns.heatmap(corr)
+*sns.histplot(dataset['fare'], kde=False, bins=10)

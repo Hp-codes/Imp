@@ -1,0 +1,33 @@
+3- Basic Statistics
+Provide summary statistics mean, median
+*import pandas as pd
+import numpy as np
+import requests
+*df=pd.read_csv("Mall_Customers.csv")
+*df ….h…d….info
+*df.Age.mean() ….m….m…s
+*df.groupby(['Age']).count()
+*df.groupby(['Gender']).count()
+*df[['Age' , 'Annual Income (k$)', 'Spending Score (1-100)']].max()
+*df[['Age' , 'Annual Income (k$)', 'Spending Score (1-100)']].std()
+*df2 = df.groupby('Gender')
+*df
+*for Gender, Gender_f in df2:
+ print(Gender)
+ print(Gender_f)
+*import pandas as pd
+import pandas as pd
+import numpy as np
+import requests
+df= pd.read_csv("iris dataset.csv")
+*col_names = ['SepalLengthCm','SepalWidthCm','PetalLengthCm',
+'PetalWidthCm','Species']
+*irisSet = (df['species']== 'Iris-setosa')
+print('Iris-setosa') 
+print(df[irisSet].describe())
+*irisVer = (df['species']== 'Iris-versicolor')
+print('Iris-versicolor') 
+print(df[irisVer].describe())
+*irisVir = (df['species']== 'Iris-virginica')
+print('Iris-virginica') 
+print(df[irisVir].describe())

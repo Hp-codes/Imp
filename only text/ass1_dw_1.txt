@@ -1,0 +1,32 @@
+1-Data Wrangling I
+Import all the required Python Lib
+*import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+*data = pd.read_csv("iris_dataset.csv")
+data.head()
+*s1 = pd.Series(range(1,10,1))
+*s1
+*s3 = pd.Series({1:21, 2:13,3:45})
+*s3
+*s2 = pd.Series([1, 2, 3, 4], index=['p', 'q', 'r','s'], 
+name='one')
+*s2
+*df1 = pd.DataFrame(s2)
+df1
+*df2 = pd.read_csv("california_housing_test.csv")
+*df2.head(10)
+*df2.tail(3)
+*df2['median_house_value_new']=df2['median_house_value']+111
+*df2.tail(3)
+*df2.to_json('data1.json')
+*len(df2['total_rooms'])
+*df2['total_rooms'].count()
+……..mean,sum,median,std,min,max,Describe,cumsum
+*df2.mean()
+*df2.describe()
+*pd.read_csv("california_housing_test.csv")
+*df2.columns
+*df2['longitude']
+*df2.iloc[:,1:3]
